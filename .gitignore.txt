@@ -1,2 +1,0 @@
-#Remember you can add files typing their name or directories typing the name the directory and "/"
-#In case you want to ignore all the things inside a directory, add "*" to the last "/"
