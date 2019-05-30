@@ -2,7 +2,8 @@ package refreshing_project;
 
 /**
  *
- * @author Ignacio_Gonzalez Binary Search Node or Sorted Node
+ * @author Ignacio_Gonzalez 
+ * Binary Search Tree or Sorted Tree
  */
 public class BinarySortedTree {
 
