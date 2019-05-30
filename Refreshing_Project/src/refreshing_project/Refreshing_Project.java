@@ -33,6 +33,14 @@ public class Refreshing_Project {
         BST.postOrderTraversing(BST.root);
         System.out.println("Search");
         System.out.println(BST.findNode(180));
+        System.out.println("Eliminate number 1\nWas number 1 eliminated?: "+BST.remove(1));
+        System.out.println("Eliminate number 18\nWas number 18 eliminated?: "+BST.remove(18));
+         BST.inOrderTraversing(BST.root);
+        System.out.println("CHANGE TRAVERSING ALGORITHM");
+        BST.preOrderTraversing(BST.root);
+        System.out.println("CHANGE TRAVERSING ALGORITHM");
+        BST.postOrderTraversing(BST.root);
+        
     }
     
 }
