@@ -47,37 +47,37 @@ public class Refreshing_Project {
         //Binary Search Tree tests end
         
         //Graphs test beginning
-        Graph graph = new Graph();
-        graph.addVertex("Bob");
-        graph.addVertex("Alice");
-        graph.addVertex("Mark");
-        graph.addVertex("Rob");
-        graph.addVertex("Maria");
-        graph.addVertex("Pepe");
-        graph.addVertex("Mario");
-        graph.addEdge("Bob", "Alice");
-        graph.addEdge("Bob", "Rob");
-        graph.addEdge("Alice", "Mark");
-        graph.addEdge("Rob", "Mark");
-        graph.addEdge("Alice", "Maria");
-        graph.addEdge("Alice", "Pepe");
-        graph.addEdge("Rob", "Maria");
-        graph.addEdge("Rob", "Mario");
-        
-        System.out.println(graph.getAdjVertices());
-        graph.removeEdge("Bob", "Alice");
-        System.out.println(graph.getAdjVertices());
-        graph.remoVertex("Bob");
-        System.out.println(graph.getAdjVertices());
-        Map testMap = graph.getAdjVertices();
-        //Just to check the type of map we are using: HashMap
-        System.out.println(testMap.getClass().getName());
-        //DFT procedure
-        //It shows the path from Alice until it finishes, for example if you now add Bob without any edge, it will shows the same since Bob is not connected 
-        //to anyone
-        System.out.println(graph.depthFirstTraversal(graph, "Alice"));      
-        //BFT procedure
-        System.out.println(graph.breadthFirstTraversal(graph, "Alice"));
+//        Graph graph = new Graph();
+//        graph.addVertex("Bob");
+//        graph.addVertex("Alice");
+//        graph.addVertex("Mark");
+//        graph.addVertex("Rob");
+//        graph.addVertex("Maria");
+//        graph.addVertex("Pepe");
+//        graph.addVertex("Mario");
+//        graph.addEdge("Bob", "Alice");
+//        graph.addEdge("Bob", "Rob");
+//        graph.addEdge("Alice", "Mark");
+//        graph.addEdge("Rob", "Mark");
+//        graph.addEdge("Alice", "Maria");
+//        graph.addEdge("Alice", "Pepe");
+//        graph.addEdge("Rob", "Maria");
+//        graph.addEdge("Rob", "Mario");
+//        
+//        System.out.println(graph.getAdjVertices());
+//        graph.removeEdge("Bob", "Alice");
+//        System.out.println(graph.getAdjVertices());
+//        graph.remoVertex("Bob");
+//        System.out.println(graph.getAdjVertices());
+//        Map testMap = graph.getAdjVertices();
+//        //Just to check the type of map we are using: HashMap
+//        System.out.println(testMap.getClass().getName());
+//        //DFT procedure
+//        //It shows the path from Alice until it finishes, for example if you now add Bob without any edge, it will shows the same since Bob is not connected 
+//        //to anyone
+//        System.out.println(graph.depthFirstTraversal(graph, "Alice"));      
+//        //BFT procedure
+//        System.out.println(graph.breadthFirstTraversal(graph, "Alice"));
         
         
         //Graphs test end
