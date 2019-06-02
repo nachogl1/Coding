@@ -5,6 +5,9 @@
  */
 package refreshing_project;
 
+import java.util.HashMap;
+import java.util.List;
+
 /**
  *
  * @author Ignacio_Gonzalez
@@ -41,7 +44,28 @@ public class Refreshing_Project {
 //        System.out.println("CHANGE TRAVERSING ALGORITHM");
 //        BST.postOrderTraversing(BST.root);
         //Binary Search Tree tests end
+
+//--------------        prueba values.stream.el removeVertex no lo has entendido bien
+        Graph graph = new Graph();
+        graph.addVertex("Bob");
+        graph.addVertex("Alice");
+        graph.addVertex("Mark");
+        graph.addVertex("Rob");
+        graph.addVertex("Maria");
+        graph.addEdge("Bob", "Alice");
+        graph.addEdge("Bob", "Rob");
+        graph.addEdge("Alice", "Mark");
+        graph.addEdge("Rob", "Mark");
+        graph.addEdge("Alice", "Maria");
+        graph.addEdge("Rob", "Maria");
+        
+        System.out.println(graph.getAdjVertices());
+        graph.removeEdge("Bob", "Alice");
+        System.out.println(graph.getAdjVertices());
+        graph.remoVertex("Bob");
+        System.out.println(graph.getAdjVertices());
+        
         
     }
-    
+
 }
