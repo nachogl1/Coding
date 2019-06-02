@@ -2,9 +2,14 @@ package refreshing_project;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Queue;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  *
@@ -15,8 +20,8 @@ public class Graph {
     private Map<Vertex, List<Vertex>> adjVertices;
 
     public Graph() {
-        this.adjVertices=new HashMap<>();
-    } 
+        this.adjVertices = new HashMap<>();
+    }
 
     public Map<Vertex, List<Vertex>> getAdjVertices() {
         return adjVertices;
@@ -65,6 +70,41 @@ public class Graph {
     List<Vertex> getAdjVertices(String label) {
         return adjVertices.get(new Vertex(label));
     }
+
+    //Traversing the graph: Depth-First Traversal
+    //root=label
+    Set<String> depthFirstTraversal(Graph graph, String root) {
+        Set<String> visited = new LinkedHashSet<String>();
+        Stack<String> stack = new Stack<String>();//LIFO (LastInFirstOut)
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+                for (Vertex v : this.getAdjVertices(vertex)) {
+                    stack.push(v.label);
+                }
+            }
+        }
+        return visited;
+    }
+
+    Set<String> breadthFirstTraversal(Graph graph, String root) {
+        Set<String> visited = new LinkedHashSet<String>();
+        Queue<String> queue = new LinkedList<String>();//FIFO(FirstInFirstOut)
+        queue.add(root);
+        visited.add(root);
+        while (!queue.isEmpty()) {
+            String vertex = queue.poll();
+            for (Vertex v : graph.getAdjVertices(vertex)) {
+                if (!visited.contains(v.label)) {
+                    visited.add(v.label);
+                    queue.add(v.label);
+                }
+            }
+        }
+        return visited;
+    }
 }
 
 class Vertex {
@@ -101,6 +141,5 @@ class Vertex {
     public String toString() {
         return label;
     }
-    
 
 }
