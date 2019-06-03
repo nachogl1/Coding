@@ -5,8 +5,10 @@
  */
 package refreshing_project;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -18,7 +20,7 @@ public class Refreshing_Project {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {  
         //Binary Search Tree tests beginning
 //        BinarySortedTree BST = new BinarySortedTree();
 //        BST.addNode(30, "Pepe");
@@ -45,7 +47,7 @@ public class Refreshing_Project {
 //        System.out.println("CHANGE TRAVERSING ALGORITHM");
 //        BST.postOrderTraversing(BST.root);
         //Binary Search Tree tests end
-        
+
         //Graphs test beginning
 //        Graph graph = new Graph();
 //        graph.addVertex("Bob");
@@ -78,11 +80,7 @@ public class Refreshing_Project {
 //        System.out.println(graph.depthFirstTraversal(graph, "Alice"));      
 //        //BFT procedure
 //        System.out.println(graph.breadthFirstTraversal(graph, "Alice"));
-        
-        
         //Graphs test end
-        
-        
     }
 
 }
