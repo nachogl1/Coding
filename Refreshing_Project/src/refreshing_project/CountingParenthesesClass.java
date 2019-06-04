@@ -16,6 +16,7 @@ import java.util.Map;
  * @author Ignacio_Gonzalez
  */
 public class CountingParenthesesClass {
+    //Solving the typical problem of counting number of brackets
    public static void main (String[] args){
        String parentheses = "{ d {{ dd e} }} et f{ }{ e{{{{ }e et etg t e  r g  {d{d }}}";
        Map<String,Integer> map=new HashMap<>();
