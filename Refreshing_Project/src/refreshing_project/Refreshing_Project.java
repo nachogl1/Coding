@@ -20,7 +20,7 @@ public class Refreshing_Project {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) { 
+    public static void main(String[] args) {
         //Binary Search Tree tests beginning
 //        BinarySortedTree BST = new BinarySortedTree();
 //        BST.addNode(30, "Pepe");
