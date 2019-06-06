@@ -17,7 +17,7 @@ public class StringReversingClass {
         long startTime = System.nanoTime();
         String str = "My favorite athlete is Peter Molar";
         //StringBuffer res=new StringBuffer("");
-        StringBuilder res=new StringBuilder(" ");
+        StringBuilder res=new StringBuilder("");
         for(int i=str.length()-1;i>=0;i--){
            res.append(str.charAt(i));
         }
@@ -27,5 +27,12 @@ public class StringReversingClass {
         System.out.println(endTime);
         
         //It was a little bit faster using StringBuilder but this class is not thread-safe
+        //Now the quickest solutions:
+        
+        StringBuilder solution= new StringBuilder(str);
+        StringBuffer solution2=new StringBuffer(str);
+        System.out.println(solution.reverse());
+        System.out.println(solution2.reverse());
+        
     }
 }
