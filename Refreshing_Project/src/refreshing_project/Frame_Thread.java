@@ -14,7 +14,7 @@ class DaughterWindow extends javax.swing.JFrame implements Runnable {
     public DaughterWindow() {
         initComponents();
         this.setVisible(true);
-        this.setTitle("Hija");
+        this.setTitle("Thread #"+String.valueOf(Thread.currentThread().getId()));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -76,29 +76,26 @@ public class Frame_Thread extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(52, 52, 52)
                 .addComponent(hija)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(hija)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(53, 53, 53))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void hijaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hijaActionPerformed
-        //new Thread(new DaughterWindow()).start();
-        System.out.println(Thread.currentThread().getId());
-        Thread t = new Thread(new DaughterWindow());
-        Thread t2 = new Thread(new DaughterWindow());
-        System.out.println(t.getId() + "--" + t2.getId());
-        t.start();
-        t2.start();
+       
+        new Thread(() -> {
+            DaughterWindow d = new DaughterWindow();
+        }).start();
 
     }//GEN-LAST:event_hijaActionPerformed
 
