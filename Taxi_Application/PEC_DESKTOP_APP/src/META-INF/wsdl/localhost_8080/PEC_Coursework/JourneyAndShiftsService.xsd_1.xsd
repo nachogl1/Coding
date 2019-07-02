@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://webServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webServices/">
+
+<xs:element name="createJourney" type="tns:createJourney"/>
+
+<xs:element name="createJourneyResponse" type="tns:createJourneyResponse"/>
+
+<xs:element name="createShift" type="tns:createShift"/>
+
+<xs:element name="createShiftResponse" type="tns:createShiftResponse"/>
+
+<xs:element name="finishJourney" type="tns:finishJourney"/>
+
+<xs:element name="finishJourneyResponse" type="tns:finishJourneyResponse"/>
+
+<xs:element name="finishShift" type="tns:finishShift"/>
+
+<xs:element name="finishShiftResponse" type="tns:finishShiftResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:complexType name="createJourney">
+<xs:sequence>
+<xs:element name="shiftId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createJourneyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:temporalWSObject" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="temporalWSObject">
+<xs:sequence>
+<xs:element name="lock" type="xs:boolean"/>
+<xs:element name="userId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createShift">
+<xs:sequence>
+<xs:element name="userId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createShiftResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="finishShift">
+<xs:sequence>
+<xs:element name="shiftId" type="xs:int"/>
+<xs:element name="shiftDuration" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="finishShiftResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="finishJourney">
+<xs:sequence>
+<xs:element name="JourneyId" type="xs:int"/>
+<xs:element name="JourneyFrom" type="xs:string" minOccurs="0"/>
+<xs:element name="JourneyTo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="finishJourneyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

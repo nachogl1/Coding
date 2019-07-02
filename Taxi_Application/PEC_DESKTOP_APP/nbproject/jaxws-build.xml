@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-JourneyAndShiftsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService"/>
+        <property name="wsdl-JourneyAndShiftsService" location="xml-resources/web-service-references/JourneyAndShiftsService/wsdl/localhost_8080/PEC_Coursework/JourneyAndShiftsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService" destdir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService" wsdl="${wsdl-JourneyAndShiftsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PEC_Coursework/JourneyAndShiftsService?wsdl" xnocompile="true" xendorsed="true" package="client">
+            <depends file="${wsdl-JourneyAndShiftsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-JourneyAndShiftsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/JourneyAndShiftsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/client"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-JourneyAndShiftsService"/>
+</project>
