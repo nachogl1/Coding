@@ -8,4 +8,5 @@ public interface Empleado {
 
     public String getTasks();
     public String getInforme();
+    
 }

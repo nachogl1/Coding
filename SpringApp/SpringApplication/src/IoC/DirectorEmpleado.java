@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package IoC;
 
 /**
@@ -25,6 +20,15 @@ class DirectorEmpleado implements Empleado {
     @Override
     public String getInforme() {
      return "Informe de Director: " + informeNuevo.getInforme();
+    }
+    
+    public void init(){
+        System.out.println("This is the part of the code where you can connect to a db or "
+                + "whatever before starting the bean");
+    }
+    
+    public void destroy(){
+        System.out.println("This is where you can allocate code to do before te bean destruction like closing resources");
     }
 
 }

@@ -13,9 +13,10 @@ public class UsoEmpleados {
 //        Empleado empleado1 = new DirectorEmpleado();
 //        System.out.println(empleado1.getTasks());
           ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-          Empleado juan = context.getBean("miSecretarioEmpleado",Empleado.class);
+          SecretarioEmpleado juan = context.getBean("secretaryBean",SecretarioEmpleado.class);
           System.out.println(juan.getTasks());
           System.out.println(juan.getInforme());
+          System.out.println(juan.getEmail());
           context.close();
     }
 }
