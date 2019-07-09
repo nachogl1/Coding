@@ -6,9 +6,9 @@
     <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
     <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/PEC_COURSEWORK</property>
-    <property name="hibernate.connection.username">PEC_COURSEWORK</property>
-    <property name="hibernate.connection.password">PEC</property>
+    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/ig2348z</property>
+    <property name="hibernate.connection.username">ig2348z</property>
+    <property name="hibernate.connection.password">ig2348z</property>
     
     <!-- JDBC connection pool (use the built-in) -->
     <property name="hibernate.connection.pool_size">1</property>
